@@ -1,0 +1,65 @@
+#main-index{
+    min-height: 100vh;   
+    .principal{
+        .carrusel{
+            height: 600px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            filter: brightness(.7);
+        }
+        .slide-in-top {
+            animation: slide-in-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) .5s both;
+        }
+        .titulo{
+            margin: 2rem 1rem 6rem 1rem;
+            h1{
+                text-align: center;
+                font-family: 'bebas neue';
+                color: $color1;
+                font-size: 4rem;
+                span{
+                    font-size: 2.5rem;
+                    color: white;
+                    font-family: 'caveat', cursive;
+
+                }
+            }
+        }   
+        .fade-in-left {
+             animation: fade-in-left 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1s both;
+        } 
+        .parallax{
+            width: 100%;
+            min-height: 200px;
+            background:url(../resources/parallax.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            filter: brightness(.2);
+            position: relative;
+            margin-bottom: 4rem;
+        }
+    } 
+}
+@keyframes slide-in-top {
+    0% {
+              transform: translateY(-1000px);
+      opacity: 0;
+    }
+    100% {
+              transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes fade-in-left {
+    0% {
+              transform: translateX(-1000px);
+      opacity: 0;
+    }
+    100% {
+              transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  

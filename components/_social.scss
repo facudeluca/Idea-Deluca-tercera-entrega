@@ -1,0 +1,21 @@
+#social{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 0;
+    top: 40vh;
+    margin-right: 3%;
+    a{
+        img{    
+            margin-bottom: 2rem;
+            transition: .5s;
+            &:hover{
+                transform: scale(1.2);
+                opacity: .5;
+            }
+        }
+    }
+    @media screen and (max-width:991px) {
+        display: none;
+    }
+}

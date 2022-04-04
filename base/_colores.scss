@@ -1,0 +1,13 @@
+$color-principal: #fcbf27;
+$color-secundario: white;
+
+.mapa-foot{
+    ul{
+        a{
+            color:$color-secundario;
+            &:hover{
+                color: mix($color-principal, $color-secundario);
+            }
+        }
+    }
+}

@@ -1,0 +1,133 @@
+@import "../base/colores";
+@import "../base/variables";
+@import "../base/maps";
+
+#login{
+    min-height: 80vh;
+    .contenedor-login{
+        background-color: $color-bg;
+        border-radius: 15px;
+        max-width: 70%;
+        @media screen and (max-width:400px) {
+            width:100%;
+            margin: 0 auto;
+            
+        }
+        .row{
+            @media screen and (max-width:991px) {
+                flex-direction: column-reverse;
+            }
+        .imagen-login{
+                min-height: 600px;
+                background: url(../resources/img-login.jpg);
+                background-repeat: no-repeat;
+                background-position: center;
+                filter: brightness(.9);
+                box-shadow: inset -10px -10px 30px black; 
+                overflow: hidden;
+                @media screen and (max-width:991px) {
+                    height: 200px;
+                    
+                }
+            }
+        }
+        .formulario-login{
+            padding: 2rem;
+            .titulo-log{
+                width: 100%;
+                font-family: 'Bebas neue';
+                color: white;
+                text-align: center;
+                margin-bottom: 2rem;
+                h2{
+                    width: 100%;
+                    font-size: 2rem;
+                    span{
+                        color: $color1;
+                    }
+                }
+            }
+            .form-login{
+                form{
+                    label{
+                        font-family:roboto;
+                        color: white;
+                        font-weight: bold;
+                        text-transform: uppercase;
+                        font-size: 1rem;
+
+                    }
+                    input{
+                        background-color: transparent;
+                        border: none;
+                        border-bottom: 2px solid $color1;
+
+                    }
+                    a{
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        color: $color1;
+                    }
+                    .form-check{
+                        display: flex;
+                        justify-content: space-between;
+                        @media screen and (max-width:750px) {
+                            flex-direction: column;
+                            align-items: center;
+                            input{
+                                margin-bottom: 1rem;
+                            }
+                            
+                        }
+                    }
+                }
+
+            }
+            .inferior-log{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 2rem;
+                a{
+                    background-color: transparent;
+                    color: $color1;
+                    font-family: 'Bebas neue';
+                    font-size: 2rem;
+                    cursor: pointer;
+                    transition: 1s ease-in-out;
+                    padding: 1rem 4rem;
+                    border-radius: 5px;
+                    text-decoration: none;
+                    margin-bottom: 2rem;
+                    &:hover{
+                        background-color: $color1;
+                        color: white;
+                        padding: auto 10rem;
+                    }
+                }
+                .sign-in{
+                    display: flex;
+                    align-items: center;
+                    h2{
+                        font-size: 1.5rem;
+                        color: white;
+                        font-family: 'Bebas Neue';
+                        margin-bottom: 0;
+                        margin-right: .5rem;
+                    }
+                    a{
+                        font-size: 1.5rem;
+                        text-decoration: underline;
+                        padding: 0;
+                        margin: 0;
+                        &:hover{
+                            background-color: transparent;
+                            padding: 0;
+                            color: gray;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

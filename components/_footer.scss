@@ -1,0 +1,78 @@
+@import "../base/colores";
+
+footer{
+    display: flex;
+    justify-content: space-evenly;
+    bottom: 0;
+    background-color: black;
+    .logo-foot{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        margin: 1rem 0 1rem 2rem;
+        color: white;
+        
+        h4{font-size: .8rem;}
+    }
+    .social-foot{
+        margin: auto;
+        a{ 
+            img{    
+                margin: 0 1rem;
+                transition: .5s ease-in-out;
+                &:hover{
+                    transform: scale(1.2);
+                    opacity: .5;
+                }
+        }
+    }
+    }
+    .mapa-foot{
+        h3{
+            font-size: 1rem;
+        }
+        display: flex;
+        flex-direction: column;
+        margin-right:3rem;
+        color: white;
+        font-size: 1rem;
+        ul{     
+            color: $color1;
+            a{   
+                 text-decoration: none;
+                color: white;
+                &:hover{
+                    color: $color1;
+                }
+            }
+            li{
+                margin-left: 0;
+                background-color: transparent;
+            }
+        }
+    }
+
+}
+@media screen and (max-width: 868px) {
+    footer{
+        flex-direction: column;
+        align-items: center;
+        .logo-foot{
+            margin: 0;
+            h4{
+                width: 70%;
+                text-align: center;
+            }
+        }
+        .social-foot{
+            margin: 2rem auto;
+        }
+        .mapa-foot{
+            text-align: center;
+            margin: 0;
+        }
+    }
+    
+}

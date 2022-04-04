@@ -1,0 +1,17 @@
+$header: (
+    color-text: white,
+    decoration: none,
+    radius: 15px,
+);
+$boton: (
+    text-decoration: none,
+    font-family: 'Bebas neue',
+    font-size: 2rem,
+    padding: 1rem 4rem,
+    border-radius: 10px,
+    background-color: $color1,
+    color: white,
+    cursor: pointer,
+    position: relative,
+    transition: 1s ease-in-out,
+);

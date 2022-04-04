@@ -1,0 +1,31 @@
+@import "../base/variables";
+@import "../components/header";
+@import "../components/footer";
+@import "../components/main-index";
+@import "../components/main-products";
+@import "../components/main-quienes";
+@import "../components/main-contacto";
+@import "../components/main-login";
+@import "../components/social";
+@import "../base/maps";
+@import "../base/colores";
+
+*{
+ box-sizing: border-box;
+}
+html, body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+    scroll-behavior: smooth;
+}
+
+.cuerpo{
+    background-color: black;
+    background-image: url(../resources/bg.png);
+    background-size: cover;
+    font-family: 'roboto';
+    font-weight: 300;
+}
+

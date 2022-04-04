@@ -1,0 +1,103 @@
+@import "../base/maps";
+
+header{
+    font-family: 'Amatic SC';
+    font-size: 1.5rem;
+    letter-spacing: 10;
+    nav{
+        button{
+
+            i{
+                color: $color1;
+                font-size: 1.5rem;
+            }
+        }
+        .navbar-toggler:focus{
+            box-shadow: none;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+        #login{
+        color:$color1;
+        font-weight: 700;
+        transition: 1s ease-in-out;
+        padding: 1rem 1.5rem 1rem 2rem;
+        margin: 0;
+        @media screen and (max-width: 991px){
+            padding: 0;
+        }
+        &:hover{
+            background-color: $color1;
+            color: map-get($header, color-text );
+            border-radius: map-get($header, radius );
+        }
+        }
+        .barra-nav{
+            justify-content: flex-end;
+            ul{
+                li{
+                    margin:auto 1rem;
+                    a{
+                        &:hover{
+                            background-color: rgba(0, 0, 0, 0.4);
+                            border-radius: 10px;
+                        }
+                        @media screen and (max-width: 991px) {
+                            &:hover{
+                            background-color: transparent;
+                            border-radius: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .navbar-collapse{
+            flex-grow: 0;
+        }
+        .enlace{
+            color: white;
+            display: inline;
+            font-weight: 400;
+            transition: .5s ease-in-out;
+        }
+        .logo-header{
+            img{
+                width: 200px;
+            }
+            margin-left: 2rem;
+            
+        }
+        @media screen and (max-width: 768px) {
+            .logo-header{
+                 img{
+                width: 150px;
+                }
+            }
+            
+        }
+        .nav-link:focus, .nav-link:hover{
+            color:$color1;
+        }
+        .menu-desplegable{
+            background-color: transparent;
+            color: $color1;
+            li{
+                a{
+                    font-size: 1.5rem;
+                    color: white;
+                    &:hover{
+                        color: $color1;
+                        background-color: rgba(0, 0, 0, 0.2);
+                        
+                    }
+                }
+            }
+            @media screen and (max-width: 991px) {
+                .divisor{
+                    width: 50%;
+                }
+                
+            }
+        }
+    }
+}

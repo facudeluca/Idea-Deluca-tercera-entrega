@@ -1,0 +1,196 @@
+@import "../base/colores";
+@import "../base/maps";
+@import "../base/variables";
+
+.contacto{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 100vh;
+    .fondo-contacto{
+        min-height: 200px;
+        width: 100%;
+        background-color: $color-bg;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h2{
+            color: #fdead7;
+            font-family: 'Kaushan Script';
+            font-size: 2.5rem;
+        }
+        .text-focus-in {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) 1s both;
+        }
+    }
+    @keyframes text-focus-in {
+        0% {
+                  filter: blur(12px);
+          opacity: 0;
+        }
+        100% {
+                  filter: blur(0px);
+          opacity: 1;
+        }
+      }
+    .slide-in-right {
+        animation: slide-in-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    }
+    @keyframes slide-in-right {
+        0% {
+                  transform: translateX(1000px);
+          opacity: 0;
+        }
+        100% {
+                  transform: translateX(0);
+          opacity: 1;
+        }
+      }
+      
+    .contenido-contacto{
+        .formulario{
+            background-color: $color-bg;
+            border-radius: 15px;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 3rem;
+            label{
+                color: white;
+                font-family: 'Roboto';
+                font-size: 1.5rem;
+                text-transform: uppercase;
+                width: 100%;
+            }
+            input{
+                background-color: transparent;
+                border: none;
+                border-bottom: 2px solid $color1;
+                padding: .3rem 1rem;
+                width: 100%;
+                &::placeholder{
+                    font-family: 'Caveat';
+                    color: rgb(129, 129, 129);
+                    text-transform: uppercase;
+                }
+            }
+            textarea{                
+                background-color: transparent;
+                border: 2px solid $color1;
+                padding: .3rem 1rem;
+                color: white;
+                width: 100%;
+            }
+            .boton{
+                input{
+                    color: white;
+                    background-color: $color1;
+                    border-radius: 5px;
+                    transition: 1s ease-in-out;
+                    cursor: pointer;
+                    border: none;
+                    &:hover{
+                        background-color: transparent;
+                        color: $color1;
+                    }
+                }
+            }
+        }
+        .segunda-columna{
+            display: flex;
+            flex-direction: column;
+            color: white;
+            font-family: 'Roboto';
+            align-items: center;
+            overflow: hidden;
+            .ubicacion{
+                background-color: $color-bg;
+                border-radius: 15px;
+                padding: 2rem;
+                justify-content: center;
+                text-align: center;
+                margin-bottom: 1rem;
+                    h3{
+                        font-size: 1.2rem;
+                        font-weight: lighter;
+                        i{
+                            color: $color1;
+                        }
+                    }
+                    .map-responsive{
+                        overflow: hidden;
+                        position: relative;
+                        height: 0;
+                        padding-bottom: 50%;
+                        margin-bottom: 1rem;
+                        iframe{
+                            left: 0;
+                            top: 0;
+                            height: 100%;
+                            width:100%;
+                            position: absolute;
+                        }
+                    }
+            }
+            .suscribe{
+                background-color: $color-bg;
+                border-radius: 15px;
+                padding: 1rem;
+                width: 100%;
+                text-align: center;
+                h3{
+                    font-size: 1rem;
+                    width: 100%;
+                }
+                .row{
+                    .email{
+                        padding: 0 0 0 1rem;
+                        input{
+                            width: 100%;
+                            background-color: transparent;
+                            border: 2px solid $color1;
+                            border-radius: 5px 0 0 5px;
+                        }
+                    }
+                    .boton-sus{
+                        padding: 0 1rem 0 0;
+                        input{
+                            width: 100%;
+                            background-color: $color1;
+                            color: white;
+                            font-weight: bold;
+                            border-radius: 0 5px 5px 0;
+                            cursor: pointer;
+                            transition: 1s ease-in-out;
+                            border: 2px solid $color1;
+                            &:hover{
+                                transform: rotateX(360deg);
+                            }
+                        }
+                    }
+                @media screen and (max-width:991px) {
+                    .email{
+                        padding: 0 1rem;
+                        input{
+                        border-radius: 5px 5px 0 0;
+                        }
+                    }
+
+                    .boton-sus{
+                        padding: 0 1rem;
+                        input{
+                        border-radius: 0 0 5px 5px;
+                        }
+                    }
+                    
+                }
+                }
+            }
+        }
+    } 
+}
