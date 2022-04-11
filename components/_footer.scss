@@ -18,6 +18,7 @@ footer{
     }
     .social-foot{
         margin: auto;
+        visibility: hidden;
         a{ 
             img{    
                 margin: 0 1rem;
@@ -27,6 +28,10 @@ footer{
                     opacity: .5;
                 }
         }
+    }
+    @media screen and (max-width:991px) {
+        visibility: visible;
+        
     }
     }
     .mapa-foot{

@@ -2,6 +2,7 @@ header {
   font-family: "Amatic SC";
   font-size: 1.5rem;
   letter-spacing: 10;
+  z-index: 10000;
 }
 header nav button i {
   color: #fcbf27;
@@ -68,8 +69,9 @@ header nav .nav-link:focus, header nav .nav-link:hover {
   color: #fcbf27;
 }
 header nav .menu-desplegable {
-  background-color: transparent;
+  background-color: #1d1d1da8;
   color: #fcbf27;
+  border-radius: 5px;
 }
 header nav .menu-desplegable li a {
   font-size: 1.5rem;
@@ -112,6 +114,7 @@ footer .logo-foot h4 {
 }
 footer .social-foot {
   margin: auto;
+  visibility: hidden;
 }
 footer .social-foot a img {
   margin: 0 1rem;
@@ -120,6 +123,11 @@ footer .social-foot a img {
 footer .social-foot a img:hover {
   transform: scale(1.2);
   opacity: 0.5;
+}
+@media screen and (max-width: 991px) {
+  footer .social-foot {
+    visibility: visible;
+  }
 }
 footer .mapa-foot {
   display: flex;
