@@ -1,1 +1,1 @@
-# Idea-Deluca-tercera-entrega
+Proyecto final, Desarrollo Web - Coderhouse - 2022.
